@@ -44,8 +44,9 @@ export const ArticleTagFilter: React.FC<{
           key={tag.id}
           primary={Boolean(activeTags[tag.id])}
           onClick={() => toggleTag(tag)}
-          children={tag.tag}
-        />
+        >
+          <bdi>{tag.tag}</bdi>
+        </Button>
       ))}
     </div>
   );

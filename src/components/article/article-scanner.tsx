@@ -65,7 +65,7 @@ function ToastContent({ article, message }: ToastProps): JSX.Element {
     <Flex justifyContent="center" alignItems="center" alignContent="center">
       <AcceptIcon style={{ marginRight: '1rem' }} />
       <FormattedMessage id="ARTICLE_FETCHED_BY_BARCODE" />
-      &#8594; {article.name}
+      &#8594; <bdi>{article.name}</bdi>
       <Currency value={article.amount} />
     </Flex>
   );

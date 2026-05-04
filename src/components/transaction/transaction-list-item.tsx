@@ -35,16 +35,16 @@ const ListItemDescription = ({
     <Ellipsis title={title}>
       {user && (
         <Link to={getUserDetailLink(user.id)}>
-          {isSender ? <>&#8592;</> : <>&#8594;</>} {user.name}
+          {isSender ? <>&#8592;</> : <>&#8594;</>} <bdi>{user.name}</bdi>
         </Link>
       )}
       {article && (
         <>
           <ShoppingBagIcon />
-          {article.name}
+          <bdi>{article.name}</bdi>
         </>
       )}
-      {composedComment}
+      <bdi>{composedComment}</bdi>
     </Ellipsis>
   );
 };

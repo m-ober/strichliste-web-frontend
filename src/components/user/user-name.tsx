@@ -16,7 +16,7 @@ export function UserName({ name, width, center }: UserNameProps): JSX.Element {
       className={classnames(styles.wrapper, { [styles.center]: center })}
       style={{ maxWidth: width }}
     >
-      <Ellipsis>{name}</Ellipsis>
+      <Ellipsis><bdi>{name}</bdi></Ellipsis>
     </div>
   );
 }

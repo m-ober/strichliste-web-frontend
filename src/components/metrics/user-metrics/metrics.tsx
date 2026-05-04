@@ -39,7 +39,7 @@ const TopRatedArticles = (props: { articles: ArticleMetric[] }) => (
         <div>
           <Currency value={articleMetric.amount} />
         </div>
-        <div>{articleMetric.article.name}</div>
+        <div><bdi>{articleMetric.article.name}</bdi></div>
       </GridOneOneTwo>
     ))}
   </Card>

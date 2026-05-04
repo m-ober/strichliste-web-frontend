@@ -56,7 +56,7 @@ export const ArticleForm: React.FC<Props> = (props) => {
       <ScrollToTop />
       <h2 className={styles.articleName}>
         {article
-          ? article.name
+          ? <bdi>{article.name}</bdi>
           : intl.formatMessage({ id: 'ARTICLE_ADD_FROM_HEADLINE' })}
       </h2>
       <div className={styles.grid}>
@@ -333,7 +333,7 @@ const ArticleHistory: React.FC<{ article: Article }> = ({ article }) => {
       <ul>
         {history.map((article) => (
           <li className={styles.list} key={article.id}>
-            <p>{article.name}</p>
+            <p><bdi>{article.name}</bdi></p>
             <p>
               <Currency hidePlusSign value={article.amount} />
             </p>

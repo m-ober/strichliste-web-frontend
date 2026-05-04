@@ -18,7 +18,7 @@ import { useDispatch } from 'react-redux';
 const ArticleListItem: React.FC<{ article: Article }> = ({ article }) => {
   return (
     <Link className={styles.list} to={getArticleFormRoute(article.id)}>
-      <span>{article.name}</span>
+      <span><bdi>{article.name}</bdi></span>
       <span>
         <Currency hidePlusSign value={article.amount} />
       </span>
